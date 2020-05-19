@@ -1,15 +1,13 @@
 {% set version = "1.9.10" %}
+{% set sha256 = "2bd7077a3d9741f0689e6c1eb58c6278fc96eccc27d964168bc8be1bc3a9040f" %}
 
 package:
   name: cub
   version: {{ version }}
 
 source:
-  - url: https://github.com/thrust/cub/archive/{{ version }}.tar.gz  # [not win]
-    sha256: 2bd7077a3d9741f0689e6c1eb58c6278fc96eccc27d964168bc8be1bc3a9040f  # [not win]
-
-  - url: https://github.com/thrust/cub/archive/{{ version }}.zip  # [win]
-    sha256: 063fea7c9bf87677a5fc5889e3fcd51582b77a2b3af9fa599d846a9c98ce9407  # [win]
+  url: https://github.com/thrust/cub/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 0
