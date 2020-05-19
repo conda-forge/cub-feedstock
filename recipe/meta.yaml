@@ -1,5 +1,5 @@
-{% set version = "1.9.9" %}
-{% set sha256 = "b6d1dc38dbcb63483e2b003492ed79cf5d32acaaef6aaeefb860a8602fb18e38" %}
+{% set version = "1.9.10" %}
+{% set sha256 = "2bd7077a3d9741f0689e6c1eb58c6278fc96eccc27d964168bc8be1bc3a9040f" %}
 
 package:
   name: cub
