@@ -1,5 +1,7 @@
 About cub
 =========
+> Note: CUB is version locked with Thrust. Instead of installing CUB directly, you should install Thrust, which will pull in
+> the correct version of CUB.
 
 Home: https://github.com/thrust/cub
 
