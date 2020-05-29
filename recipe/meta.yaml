@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: mkdir -p "$PREFIX"/include && cp -r cub "$PREFIX"/include  # [not win]
 
 test:
@@ -27,6 +27,9 @@ about:
     CUB is a flexible library of cooperative threadblock primitives and other utilities for CUDA
     kernel programming.
   description: |
+    Note: CUB is version locked with Thrust. Instead of installing CUB directly, you should install
+    Thrust, which will pull in the correct version of CUB.
+
     CUB provides state-of-the-art, reusable software components for every layer of the CUDA
     programming model:
     - Parallel primitives
