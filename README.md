@@ -1,7 +1,5 @@
 About cub
 =========
-> Note: CUB is version locked with Thrust. Instead of installing CUB directly, you should install Thrust, which will pull in
-> the correct version of CUB.
 
 Home: https://github.com/thrust/cub
 
@@ -12,9 +10,6 @@ Feedstock license: BSD 3-Clause
 Summary: CUB is a flexible library of cooperative threadblock primitives and other utilities for CUDA
 kernel programming.
 
-
-Note: CUB is version locked with Thrust. Instead of installing CUB directly, you should install
-Thrust, which will pull in the correct version of CUB.
 
 CUB provides state-of-the-art, reusable software components for every layer of the CUDA
 programming model:
