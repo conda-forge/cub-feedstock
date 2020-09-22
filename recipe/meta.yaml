@@ -14,7 +14,7 @@ build:
   script: mkdir -p "$PREFIX"/include && cp -r cub "$PREFIX"/include  # [not win]
 
 requirements:
-  run:
+  run_constrained:
     - thrust {{ version }}.*
 
 test:
