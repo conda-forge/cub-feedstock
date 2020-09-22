@@ -1,5 +1,5 @@
-{% set version = "1.9.10" %}
-{% set sha256 = "2bd7077a3d9741f0689e6c1eb58c6278fc96eccc27d964168bc8be1bc3a9040f" %}
+{% set version = "1.10.10" %}
+{% set sha256 = "8531e09f909aa021125cffa70a250761dfc247f960d7a1a12f65e6651ffb6477" %}
 
 package:
   name: cub
@@ -54,3 +54,4 @@ about:
 extra:
   recipe-maintainers:
     - rongou
+    - kkraus
