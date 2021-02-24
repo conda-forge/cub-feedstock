@@ -5,11 +5,15 @@ Home: https://github.com/thrust/cub
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cub-feedstock/blob/master/LICENSE.txt)
 
 Summary: CUB is a flexible library of cooperative threadblock primitives and other utilities for CUDA
 kernel programming.
 
+
+Development: https://github.com/thrust/cub
+
+Documentation: http://nvlabs.github.io/cub/
 
 CUB provides state-of-the-art, reusable software components for every layer of the CUDA
 programming model:
