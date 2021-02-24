@@ -1,5 +1,5 @@
-{% set version = "1.10.0" %}
-{% set sha256 = "8531e09f909aa021125cffa70a250761dfc247f960d7a1a12f65e6651ffb6477" %}
+{% set version = "1.11.0" %}
+{% set sha256 = "58948cfd0d46ed5ff683b5337a5de43d3c46a922f55404c32d09a6375b4f3108" %}
 
 package:
   name: cub
@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
   script: mkdir -p "$PREFIX"/include && cp -r cub "$PREFIX"/include  # [not win]
 
 requirements:
