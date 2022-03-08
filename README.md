@@ -1,7 +1,7 @@
 About cub
 =========
 
-Home: https://github.com/thrust/cub
+Home: https://github.com/NVIDIA/cub
 
 Package license: BSD-3-Clause
 
