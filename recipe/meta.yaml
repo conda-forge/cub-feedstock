@@ -1,5 +1,5 @@
-{% set version = "1.11.0" %}
-{% set sha256 = "58948cfd0d46ed5ff683b5337a5de43d3c46a922f55404c32d09a6375b4f3108" %}
+{% set version = "1.16.0" %}
+{% set sha256 = "271dc42d0a7ab3bd311eefa4ba8fd19f99ec093cf5e9053426f358914c8983d6" %}
 
 package:
   name: cub
@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: mkdir -p "$PREFIX"/include && cp -r cub "$PREFIX"/include  # [not win]
 
 requirements:
@@ -23,7 +23,7 @@ test:
     - if not exist "%LIBRARY_INC%"\cub\cub.cuh exit 1  # [win]
 
 about:
-  home: https://github.com/thrust/cub
+  home: https://github.com/NVIDIA/cub
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.TXT
