@@ -14,7 +14,11 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ compiler('cuda') }}
     - cmake >=3.15
+    - make
   run_constrained:
     - thrust {{ version }}.*
 
