@@ -20,5 +20,5 @@ cmake -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
 
 cmake --build %CUB_BUILD_DIR% --target install %VERBOSE_FLAG%
 
-if %ERRORLEVEL% neq 0 exit 1
+if %ERRORLEVEL% neq 0 exit %ERRORLEVEL%
 exit 0
