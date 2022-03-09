@@ -10,8 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: mkdir -p "$PREFIX"/include && cp -r cub "$PREFIX"/include  # [not win]
+  number: 1
 
 requirements:
   run_constrained:
@@ -20,7 +19,9 @@ requirements:
 test:
   commands:
     - test -e "$PREFIX"/include/cub/cub.cuh  # [not win]
+    - test -e "$PREFIX"/lib/cmake/cub/cub-config.cmake  # [not win]
     - if not exist "%LIBRARY_INC%"\cub\cub.cuh exit 1  # [win]
+    - if not exist "%LIBRARY_LIB%"\cmake\cub\cub-config.cmake  # [win]
 
 about:
   home: https://github.com/NVIDIA/cub
