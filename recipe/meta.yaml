@@ -31,7 +31,7 @@ test:
     - test -e "$PREFIX"/include/cub/cub.cuh  # [not win]
     - test -e "$PREFIX"/lib/cmake/cub/cub-config.cmake  # [not win]
     - if not exist "%LIBRARY_INC%"\cub\cub.cuh exit 1  # [win]
-    - if not exist "%LIBRARY_LIB%"\cmake\cub\cub-config.cmake  # [win]
+    - if not exist "%LIBRARY_LIB%"\cmake\cub\cub-config.cmake exit 1  # [win]
 
 about:
   home: https://github.com/NVIDIA/cub
