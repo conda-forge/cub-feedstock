@@ -11,6 +11,7 @@ export VERBOSE_FLAG="-v"
 
 mkdir -p ${CUB_BUILD_DIR}
 cd ${CUB_SRC_DIR}
+ls
 
 cmake -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
       -DCMAKE_INSTALL_LIBDIR="${PREFIX}/lib" \
