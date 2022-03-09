@@ -2,15 +2,14 @@
 
 set -ex
 
-export CUB_SRC_DIR="${SRC_DIR}/cub-${PKG_VERSION}"
-export CUB_BUILD_DIR="${CUB_SRC_DIR}/build"
+export CUB_BUILD_DIR="${SRC_DIR}/build"
 export BUILD_TESTS=OFF
 export BUILD_EXAMPLES=OFF
 export BUILD_TYPE=Release
 export VERBOSE_FLAG="-v"
 
 mkdir -p ${CUB_BUILD_DIR}
-cd ${CUB_SRC_DIR}
+cd ${SRC_DIR}
 ls
 
 cmake -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
