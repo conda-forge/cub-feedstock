@@ -13,6 +13,8 @@ build:
   number: 1
 
 requirements:
+  build:
+    - cmake >=3.15
   run_constrained:
     - thrust {{ version }}.*
 
