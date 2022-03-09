@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-set -e
+set -ex
 
 export CUB_SRC_DIR="${SRC_DIR}/cub-${PKG_VERSION}"
-export CUB_BUILD_DIR=${CUB_BUILD_DIR:=${CUB_SRC_DIR}/build}
+export CUB_BUILD_DIR="${CUB_SRC_DIR}/build"
 export BUILD_TESTS=OFF
 export BUILD_EXAMPLES=OFF
 export BUILD_TYPE=Release
