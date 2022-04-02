@@ -10,17 +10,30 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: mkdir -p "$PREFIX"/include && cp -r cub "$PREFIX"/include  # [not win]
+  number: 1
+  skip: true  # [(cuda_compiler_version != "11.2")]
+  ignore_run_exports_from:
+    - {{ compiler('cuda') }}
+  script_env:
+    # for some reason /usr/local/cuda is not added to $PATH in the docker image
+    - CUDA_HOME  # [ppc64le or aarch64]
 
 requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ compiler('cuda') }}
+    - cmake >=3.15
+    - make
   run_constrained:
     - thrust {{ version }}.*
 
 test:
   commands:
     - test -e "$PREFIX"/include/cub/cub.cuh  # [not win]
+    - test -e "$PREFIX"/lib/cmake/cub/cub-config.cmake  # [not win]
     - if not exist "%LIBRARY_INC%"\cub\cub.cuh exit 1  # [win]
+    - if not exist "%LIBRARY_LIB%"\cmake\cub\cub-config.cmake exit 1  # [win]
 
 about:
   home: https://github.com/NVIDIA/cub

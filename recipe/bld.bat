@@ -1,7 +1,24 @@
 @echo ON
 
-rem Copy over the include dir
-robocopy cub "%LIBRARY_INC%"\cub /e
-if %ERRORLEVEL% GEQ 8 exit 1
+set "CUB_BUILD_DIR=%SRC_DIR%\build"
+set "BUILD_TESTS=OFF"
+set "BUILD_EXAMPLES=OFF"
+set "BUILD_TYPE=Release"
+set "VERBOSE_FLAG=-v"
 
+mkdir -p %CUB_BUILD_DIR%
+cd %SRC_DIR%
+
+cmake -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
+      -DCMAKE_INSTALL_LIBDIR=%LIBRARY_LIB% ^
+      -DCMAKE_BUILD_TYPE=%BUILD_TYPE% ^
+      -DCUB_ENABLE_HEADER_TESTING=%BUILD_TESTS% ^
+      -DCUB_ENABLE_TESTING=%BUILD_TESTS% ^
+      -DCUB_ENABLE_EXAMPLES=%BUILD_EXAMPLES% ^
+      -B %CUB_BUILD_DIR% ^
+      -S .
+
+cmake --build %CUB_BUILD_DIR% --target install %VERBOSE_FLAG%
+
+if %ERRORLEVEL% neq 0 exit %ERRORLEVEL%
 exit 0
