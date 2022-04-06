@@ -14,6 +14,8 @@ source ${FEEDSTOCK_ROOT}/.scripts/logging_utils.sh
 
 ( endgroup "Start Docker" ) 2> /dev/null
 
+echo "\$LANG="'"'"${LANG}"'"'
+
 ( startgroup "Configuring conda" ) 2> /dev/null
 
 export PYTHONUNBUFFERED=1
