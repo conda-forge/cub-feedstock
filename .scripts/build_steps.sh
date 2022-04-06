@@ -14,7 +14,7 @@ source ${FEEDSTOCK_ROOT}/.scripts/logging_utils.sh
 
 ( endgroup "Start Docker" ) 2> /dev/null
 
-echo "\$LANG="'"'"${LANG}"'"'
+echo "\$PATH="'"'"${PATH}"'"'
 
 ( startgroup "Configuring conda" ) 2> /dev/null
 
