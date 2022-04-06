@@ -15,6 +15,7 @@ source ${FEEDSTOCK_ROOT}/.scripts/logging_utils.sh
 ( endgroup "Start Docker" ) 2> /dev/null
 
 echo "\$PATH="'"'"${PATH}"'"'
+echo "\$supkg="'"'"${supkg}"'"'
 
 ( startgroup "Configuring conda" ) 2> /dev/null
 
