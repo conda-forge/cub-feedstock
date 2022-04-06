@@ -14,9 +14,6 @@ build:
   skip: true  # [(cuda_compiler_version != "11.2")]
   ignore_run_exports_from:
     - {{ compiler('cuda') }}
-  script_env:
-    # for some reason /usr/local/cuda is not added to $PATH in the docker image
-    - CUDA_HOME  # [ppc64le or aarch64]
 
 requirements:
   build:
