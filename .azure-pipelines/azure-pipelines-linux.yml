@@ -45,6 +45,7 @@ jobs:
         else
           export IS_PR_BUILD="False"
         fi
+        echo "\$CI="'"'"${CI}"'"'
         .scripts/run_docker_build.sh
     displayName: Run docker build
     env:
