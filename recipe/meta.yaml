@@ -1,5 +1,5 @@
-{% set version = "1.16.0" %}
-{% set sha256 = "271dc42d0a7ab3bd311eefa4ba8fd19f99ec093cf5e9053426f358914c8983d6" %}
+{% set version = "1.15.0" %}
+{% set sha256 = "1781ee5eb7f00acfee5bff88e3acfc67378f6b3c24281335e18ae19e1f2ff685" %}
 
 package:
   name: cub
@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [(cuda_compiler_version != "11.2")]
   ignore_run_exports_from:
     - {{ compiler('cuda') }}
