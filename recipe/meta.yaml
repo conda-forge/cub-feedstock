@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   skip: true  # [(cuda_compiler_version != "11.2")]
   ignore_run_exports_from:
     - {{ compiler('cuda') }}
@@ -24,6 +24,9 @@ requirements:
     - make
   run_constrained:
     - thrust {{ version }}.*
+    - cuda-cccl <0.0.0a0
+    - cuda-cccl-impl <0.0.0a0
+    - cuda-cccl_{{ target_platform }} <0.0.0a0
 
 test:
   commands:
